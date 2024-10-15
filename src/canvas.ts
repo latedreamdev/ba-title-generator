@@ -268,7 +268,7 @@ export default class LogoCanvas {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${this.textL}${this.textR}_ba-style@nulla.top.png`;
+      a.download = `${this.textL}${this.textR}_ba-title@ba.xsawa.us.kg.png`;
       a.click();
       URL.revokeObjectURL(url);
     });
@@ -279,11 +279,9 @@ export default class LogoCanvas {
     navigator.clipboard
       .write(cp)
       .then(() => {
-        console.log('image copied');
         const msg = document.querySelector('#message-switch') as HTMLInputElement;
         msg.checked = true;
         setTimeout(() => (msg.checked = false), 2000);
       })
-      .catch((e) => console.error("can't copy", e));
   }
 }
